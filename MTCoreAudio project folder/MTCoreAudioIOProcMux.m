@@ -14,8 +14,7 @@
 
 #import "MTCoreAudioIOProcMux.h"
 
-#import <vecLib/vecLib.h>
-
+#include <Accelerate/Accelerate.h>
 #include <string.h>
 
 

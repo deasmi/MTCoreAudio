@@ -35,7 +35,6 @@
 		4C6CB3F3054DF62C0017AA37 /* MTCoreAudioIOProcMux.m in Sources */ = {isa = PBXBuildFile; fileRef = EE63C733034BBB4500543B42 /* MTCoreAudioIOProcMux.m */; };
 		4C6CB3F6054DF62C0017AA37 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE975ABC01D4864100543B42 /* CoreAudio.framework */; };
 		4C6CB3F7054DF62C0017AA37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE975AC701D489C900543B42 /* Foundation.framework */; };
-		4C6CB3F8054DF62C0017AA37 /* vecLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE25B6D034F776D00543B42 /* vecLib.framework */; };
 		4C6CB3FB054DF62C0017AA37 /* index.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = EEF187F901E7E27100543B42 /* index.html */; };
 		4C6CB3FC054DF62C0017AA37 /* MTCoreAudioConstantsAndTypes.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = EEF187FA01E7E27100543B42 /* MTCoreAudioConstantsAndTypes.html */; };
 		4C6CB3FD054DF62C0017AA37 /* MTCoreAudioDevice.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = EEF187FB01E7E27100543B42 /* MTCoreAudioDevice.html */; };
@@ -45,6 +44,7 @@
 		4CB5AFA3056D9DEE00054BE0 /* StreamDescription.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CB5AFA1056D9DEE00054BE0 /* StreamDescription.strings */; };
 		4CFE9C0E061B98BC002AE79E /* MTAudioBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CFE9C0C061B98BC002AE79E /* MTAudioBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CFE9C0F061B98BC002AE79E /* MTAudioBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE9C0D061B98BC002AE79E /* MTAudioBuffer.m */; };
+		5A5AA2D216175887007693E9 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5AA2D116175887007693E9 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -100,6 +100,7 @@
 		4CC97FA2061D667900AA0B85 /* MTAudioBufferListUtils.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; name = MTAudioBufferListUtils.html; path = Documentation/MTAudioBufferListUtils.html; sourceTree = "<group>"; };
 		4CFE9C0C061B98BC002AE79E /* MTAudioBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAudioBuffer.h; sourceTree = "<group>"; };
 		4CFE9C0D061B98BC002AE79E /* MTAudioBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAudioBuffer.m; sourceTree = "<group>"; };
+		5A5AA2D116175887007693E9 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		EE0A5F5801DC711E00543B42 /* MTByteBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTByteBuffer.h; sourceTree = "<group>"; };
 		EE0A5F5901DC711E00543B42 /* MTByteBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTByteBuffer.m; sourceTree = "<group>"; };
 		EE30F1CC034C28BD00543B42 /* MTCoreAudioDevicePrivateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoreAudioDevicePrivateAdditions.h; sourceTree = "<group>"; };
@@ -129,9 +130,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5AA2D216175887007693E9 /* Accelerate.framework in Frameworks */,
 				4C6CB3F6054DF62C0017AA37 /* CoreAudio.framework in Frameworks */,
 				4C6CB3F7054DF62C0017AA37 /* Foundation.framework in Frameworks */,
-				4C6CB3F8054DF62C0017AA37 /* vecLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +211,7 @@
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A5AA2D116175887007693E9 /* Accelerate.framework */,
 				EE975ABC01D4864100543B42 /* CoreAudio.framework */,
 				EE975AC701D489C900543B42 /* Foundation.framework */,
 				EEE25B6D034F776D00543B42 /* vecLib.framework */,
@@ -296,10 +298,16 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 4C36FF9908595074003D8A10 /* Build configuration list for PBXProject "MTCoreAudio" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* MTCoreAudio */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				4C6CB3E0054DF62C0017AA37 /* MTCoreAudio */,
 			);
@@ -371,10 +379,8 @@
 		4C36FF9608595074003D8A10 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -397,6 +403,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = MTCoreAudio;
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = YES;
 				WARNING_CFLAGS = "-Wmost";
@@ -408,10 +415,8 @@
 		4C36FF9708595074003D8A10 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -432,6 +437,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = MTCoreAudio;
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = YES;
 				WARNING_CFLAGS = "-Wmost";
@@ -443,10 +449,8 @@
 		4C36FF9808595074003D8A10 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -465,6 +469,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = MTCoreAudio;
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = YES;
 				WARNING_CFLAGS = "-Wmost";
@@ -475,37 +480,31 @@
 		4C36FF9A08595074003D8A10 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx;
 			};
 			name = Development;
 		};
 		4C36FF9B08595074003D8A10 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				GCC_OPTIMIZATION_LEVEL = 3;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx;
 			};
 			name = Deployment;
 		};
 		4C36FF9C08595074003D8A10 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx;
 			};
 			name = Default;
 		};

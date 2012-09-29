@@ -9,7 +9,7 @@
 #import "MTConversionBuffer.h"
 #import <math.h>
 #import <string.h>
-#import <vecLib/vecLib.h>
+#include <Accelerate/Accelerate.h>
 
 #define SRC_SLOP_FRAMES 8
 #define SR_ERROR_ALLOWANCE 1.01 // 1%

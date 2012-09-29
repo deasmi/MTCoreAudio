@@ -29,3 +29,7 @@ Enjoy!
 
 -mike thornburgh, 2002-11-03
 
+I have uploaded this to github before starting some work to add
+a few features to the AudioMonitor app that I use all the time
+
+-Dean Smith, 2012-09-30

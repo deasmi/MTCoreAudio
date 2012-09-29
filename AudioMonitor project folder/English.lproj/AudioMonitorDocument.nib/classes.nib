@@ -1,0 +1,44 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {pauseButton = id; playthroughButton = id; setAdjustVolume = id; }; 
+            CLASS = AudioMonitorDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                adjustLeftLabel = id; 
+                adjustLeftSlider = id; 
+                adjustRightLabel = id; 
+                adjustRightSlider = id; 
+                playbackDeviceBrowser = id; 
+                playthroughButton = id; 
+                recordDeviceBrowser = id; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                doDeviceMenu = id; 
+                doDeviceSourceMenu = id; 
+                doLogicalFormatMenu = id; 
+                doPhysicalFormatMenu = id; 
+                doVolumeSlider = id; 
+            }; 
+            CLASS = MTAudioDeviceBrowser; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                delegate = id; 
+                deviceNameMenu = id; 
+                deviceSourceMenu = id; 
+                deviceUIDMenu = id; 
+                logicalFormatMenu = id; 
+                physicalFormatMenu = id; 
+                volumeLabelMatrix = id; 
+                volumeSliderMatrix = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }
+    ); 
+    IBVersion = 1; 
+}

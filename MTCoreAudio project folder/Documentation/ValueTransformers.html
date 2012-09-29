@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>MTCoreAudio Value Transformers</title>
+</head>
+
+<body>
+<h1>MTCoreAudio Value Transformers Reference</h1>
+<p>
+MTCoreAudio provides some NSValueTransformers for use with Cocoa Bindings.  They are registered and available to Cocoa Bindings when
+<a href="MTCoreAudioDevice.html">MTCoreAudioDevice</a> is initialized.  These transformers must be initialized and
+registered before any nib file that uses them is loaded.
+</p>
+
+<h2>Value Transformers</h2>
+<ul plain>
+	<li> <a href="#MTDecibelToLinearTransformerName">MTDecibelToLinearTransformer</a>
+	<li> <a href="#MTLinearToDecibelTransformerName">MTLinearToDecibelTransformer</a>
+</ul>
+
+<hr>
+
+
+<h3><a name="MTDecibelToLinearTransformerName">MTDecibelToLinearTransformer</a></h3>
+<code>NSString * const MTDecibelToLinearTransformerName = @"MTDecibelToLinearTransformer"</code>
+<br><br>
+The <code>MTDecibelToLinearTransformerName</code> value transformer returns an instance of NSNumber containing a double-precision floating point value.  The returned value is the result of converting the original logarithmic-scale value, <code>dB</code>, to a linear scale with the formula <code>&alpha; = 10<sup>(dB/20)</sup></code>.  This transformation is reversible if <code>&alpha;</code> is positive.  The original value must respond to <code>-doubleValue</code>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="MTLinearToDecibelTransformerName">MTLinearToDecibelTransformer</a></h3>
+<code>NSString * const MTLinearToDecibelTransformerName = @"MTLinearToDecibelTransformer"</code>
+<br><br>
+The <code>MTLinearToDecibelTransformerName</code> value transformer returns an instance of NSNumber containing a double-precision floating point value.  The returned value is the result of converting the original linear-scale value, <code>&alpha;</code> (which must be positive), to a logarithmic scale with the formula <code>dB = 20 &times; log<sub>10</sub>(&alpha;)</code>.  This transformation is reversible.  The original value must respond to <code>-doubleValue</code>.
+<br><br>
+Use this transformer to bind a model object that uses a linear scale to a view object (such as a slider) that uses a log scale.
+<br><br>
+<hr>
+
+<a href="http://aldebaran.armory.com/~zenomt/">Mike</a> &gt;
+<a href="http://aldebaran.armory.com/~zenomt/macosx/">Mac OS X</a> &gt;
+<a href="./index.html">MTCoreAudio.framework</a> &gt;
+MTCoreAudio Value Transformers
+

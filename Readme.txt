@@ -33,3 +33,10 @@ I have uploaded this to github before starting some work to add
 a few features to the AudioMonitor app that I use all the time
 
 -Dean Smith, 2012-09-30
+
+I no longer know what this is for, or if it even works. 
+I will be making this repo read only on github on the slim chance
+someone still wants to see it.
+
+-Dean Smith, 2020-08-14
+
